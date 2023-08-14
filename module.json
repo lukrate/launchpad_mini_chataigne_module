@@ -17,22 +17,25 @@
 	{
 		"Show Color Palette": {
 			"type":"Trigger",
-			"callback": "colorPattern",
-			"description": "prout"
+			"description": "Rainbow color in all pads"
 		},
 
-		"Reset Palette": {
+		"Reset Color Palette": {
 			"type":"Trigger",
-			"callback": "colorPattern",
-			"description": "prout"
+			"description": "Reset all button to black"
 		},
 
-		"Active Pad":
+		"Active Pads":
 		{
 			"type":"Container",
-			"collapsed":true,
+			"collapsed":false,
 			
-			"line 1":{
+			"Reload config": {
+				"type":"Trigger",
+				"description": "Reset all active pads"
+			},
+
+			"Line 1":{
 				"type":"Container",
 				"collapsed":true,
 				"Pad 1":  { "type":"Boolean" },
@@ -44,7 +47,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 2":{
+			"Line 2":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -57,7 +60,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 3":{
+			"Line 3":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -70,7 +73,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 4":{
+			"Line 4":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -83,7 +86,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 5":{
+			"Line 5":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -96,7 +99,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 6":{
+			"Line 6":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -109,7 +112,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 7":{
+			"Line 7":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -122,7 +125,7 @@
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
 			},
-			"line 8":{
+			"Line 8":{
 				"type":"Container",
 				"collapsed":true,
 
@@ -134,6 +137,11 @@
 				"Pad 6":  { "type":"Boolean" },
 				"Pad 7":  { "type":"Boolean" },
 				"Pad 8":  { "type":"Boolean" }
+			},
+
+			"Reset all active pads": {
+				"type":"Trigger",
+				"description": "Reset all active pads"
 			}
 		}
 	},

@@ -1,5 +1,6 @@
 var valuesPath = local.values;
 var valuesPadPath = local.values.activePads;
+var paramPadPath = local.parameters.activePads;
 
 var activePads = [];
 
@@ -29,6 +30,19 @@ function colorPattern(show)
 				setLed(1, parseInt(lindex + "" + bindex), 0);
 			}
 			global_i += 1;
+		}
+	}
+}
+
+function resetPads(){
+	var line = 8;
+	var buttons = 8;
+	for (var lindex = 1; lindex <= line; lindex += 1) {
+		var currentLine = paramPadPath.getChild("line" + lindex);
+		for (var bindex = 1; bindex <= buttons; bindex += 1) {
+			var currentPad = currentLine.getChild("pad" + bindex);
+			currentPad.set(false);
+			setLed(1, parseInt(lindex + "" + bindex), 0);
 		}
 	}
 }
@@ -80,7 +94,10 @@ function resetColors()
 
 function moduleParameterChanged(param)
 {
-	if(param.getParent().getParent().name == "activePad")
+	script.log(param.getParent().getParent().name);
+	script.log(param.getParent().name);
+	script.log(param.name);
+	if(param.getParent().getParent().name == "activePads")
 	{	var line = param.getParent().name.split("e")[1];
 		var id = param.name.split("d")[1];
 		var pad = parseInt(line + id);
@@ -98,15 +115,18 @@ function moduleParameterChanged(param)
 		colorPattern(true);
 	}
 
-	if (param.name == "resetPalette") {
+	if (param.name == "resetColorPalette") {
 		colorPattern(false);
+	}
+	
+	if (param.name == "resetAllActivePads") {
+		resetPads();
 	}
 }
 
 
 
 function moduleValueChanged(value) {
-	script.log(value.name);
 	if(value.is(value) && value.name == "blink" || value.name == "ledColor") {
 
 		var pitch = value.getParent().name;
