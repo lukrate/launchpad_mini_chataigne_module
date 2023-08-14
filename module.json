@@ -1,0 +1,178 @@
+{
+	"name":"Launchpad Mini",
+	"type":"MIDI",
+	"path":"Hardware",
+	
+	"version":"1.0.0",
+	"description":"Special MIDI Module for the Novation Launchpad Mini MIDI Controller",
+	"url":"",
+	"downloadURL":"",
+	
+	"hasInput":true,
+	"hasOutput":true, 
+
+	"hideDefaultCommands":false,
+
+	"parameters":
+	{
+		"Show Color Palette": {
+			"type":"Trigger",
+			"callback": "colorPattern",
+			"description": "prout"
+		},
+
+		"Reset Palette": {
+			"type":"Trigger",
+			"callback": "colorPattern",
+			"description": "prout"
+		},
+
+		"Active Pad":
+		{
+			"type":"Container",
+			"collapsed":true,
+			
+			"line 1":{
+				"type":"Container",
+				"collapsed":true,
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 2":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 3":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 4":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 5":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 6":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 7":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			},
+			"line 8":{
+				"type":"Container",
+				"collapsed":true,
+
+				"Pad 1":  { "type":"Boolean" },
+				"Pad 2":  { "type":"Boolean" },
+				"Pad 3":  { "type":"Boolean" },
+				"Pad 4":  { "type":"Boolean" },
+				"Pad 5":  { "type":"Boolean" },
+				"Pad 6":  { "type":"Boolean" },
+				"Pad 7":  { "type":"Boolean" },
+				"Pad 8":  { "type":"Boolean" }
+			}
+		}
+	},
+
+	"defaults":
+	{		
+		"devices":["MIDIIN2 (LPMiniMK3 MIDI)", "MIDIOUT2 (LPMiniMK3 MIDI)"],
+		"autoAdd":true,
+		"usePitchForNoteNames": true
+	},
+
+	"hideDefaultParameters":
+	[
+		"autoFeedback"
+	],
+
+	"hideDefaultValues":[
+		"tempo",
+		"mtc"
+	],
+
+	"scripts":
+	[
+		"LaunchpadMini.js"
+	],
+
+	"values":
+	{
+		"clearList": {
+			"type": "Trigger"
+		},
+		"Active Pads":
+		{
+			"type":"Container"
+		}
+	},
+
+	"commands":
+	{
+		
+	}
+}
