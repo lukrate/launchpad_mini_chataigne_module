@@ -5,8 +5,8 @@
 	
 	"version":"1.0.0",
 	"description":"Special MIDI Module for the Novation Launchpad Mini MIDI Controller",
-	"url":"",
-	"downloadURL":"",
+	"url":"https://github.com/lukrate/launchpad_mini_chataigne_module",
+	"downloadURL":"https://github.com/lukrate/launchpad_mini_chataigne_module/archive/refs/heads/master.zip",
 	
 	"hasInput":true,
 	"hasOutput":true, 
